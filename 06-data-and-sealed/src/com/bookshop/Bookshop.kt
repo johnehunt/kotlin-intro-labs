@@ -15,7 +15,7 @@ object Bookshop {
         val author = Author("Pete Smith")
         val address = Address(10, "High Street", "Salisbury", "Wiltshire", "SL10 34D")
         val publisher = Publisher("Tech Books Publishing Ltd.", address)
-        book = Book("Scala Unleashed", 15.95, author, publisher, Technical)
+        book = Book("Kotlin Unleashed", 15.95, author, publisher, Technical)
     }
 
     fun printDetails() {
