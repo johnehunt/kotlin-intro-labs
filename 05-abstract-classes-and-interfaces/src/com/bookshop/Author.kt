@@ -1,6 +1,6 @@
 package com.bookshop
 
-class Author(_name: String): Entity(_name) {
+class Author(val name: String) {
     override fun toString(): String {
         return "Author(name='$name')"
     }
