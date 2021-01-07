@@ -29,6 +29,13 @@ fun main() {
 
     println("Filter example:")
     val technicalBooks = Bookshop.books[Technical]
-    technicalBooks?.filter{book -> book.price < 15.0}?.forEach{book -> prettyPrint(book) }
+
+    println("Pretty Printing all books in the Technical genre")
+    technicalBooks?.forEach { book -> prettyPrint(book) }
+
+    println("Printing all books below 15.0 in price")
+    technicalBooks
+        ?.filter{book -> book.price < 15.0}
+        ?.forEach{book -> prettyPrint(book) }
 
 }
