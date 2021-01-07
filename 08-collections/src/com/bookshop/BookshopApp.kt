@@ -11,4 +11,9 @@ fun main() {
 
     Bookshop.book.numberHeld = 5
     println("Number of copies held: ${Bookshop.book.numberHeld}")
+
+    println("Technical books: ${Bookshop.books[Technical]}")
+    println("History books: ${Bookshop.books[History]}")
+    println("Fiction books: ${Bookshop.books[Fiction]}")
+
 }
