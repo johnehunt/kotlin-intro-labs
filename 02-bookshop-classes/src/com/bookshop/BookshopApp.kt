@@ -12,4 +12,8 @@ fun main() {
     println("\nCalculating the Sales Discount price")
     book.salesDiscount = 0.10
     println("Sale price of book: ${book.calculateSalePrice()}")
+
+    // To pretty print the number use string.format
+    println("Sale price of book: %.2f".format(book.calculateSalePrice()))
+
 }
