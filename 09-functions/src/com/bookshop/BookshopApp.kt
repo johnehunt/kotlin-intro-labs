@@ -20,8 +20,6 @@ fun main() {
 
     println()
 
-    prettyPrint(Bookshop.book)
-
     val b: Book? = Bookshop.books[Technical]?.get(0)
     b?.apply{prettyPrint(this)}
 }
