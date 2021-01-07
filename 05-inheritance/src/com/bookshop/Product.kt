@@ -8,6 +8,16 @@ open class Product(val title: String,
 
     var salesDiscount = 0.0
 
+    var numberHeld = 0
+        get() {
+            return field
+        }
+        set(value) {
+            if (value >= 0) {
+                field = value
+            }
+        }
+
     fun calculateSalePrice(): Double {
         var price = 0.0
         val discountAmount = this.price * salesDiscount
