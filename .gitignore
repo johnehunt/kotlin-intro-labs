@@ -21,6 +21,6 @@ bin-release/
 /.idea
 *.class
 *.iml
-/12-coroutines/.gradle/
-/12-coroutines/build/kotlin/compileKotlin/
-/12-coroutines/gradle/wrapper/
+/.gradle
+/build
+/gradle/wrapper/
