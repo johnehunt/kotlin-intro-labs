@@ -13,13 +13,10 @@ fun main() {
 
     println("\nCalculating the Sales Discount price")
     Bookshop.book.salesDiscount = 0.10
-    println("Sale price of book: ${Bookshop.book.calculateSalePrice()}")
+    println("Sale price of book: %.2f".format(Bookshop.book.calculateSalePrice()))
 
     Bookshop.book.numberHeld = 5
-    println(Bookshop.book.numberHeld)
-
-    Bookshop.book.numberHeld = -1
-    println(Bookshop.book.numberHeld)
+    println("Number of copies held: ${Bookshop.book.numberHeld}")
 
     println()
 
