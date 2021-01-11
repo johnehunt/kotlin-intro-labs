@@ -4,10 +4,10 @@ class Game(
     _title: String,
     _price: Double,
     override val author: Author,
-    val manufacter: String
+    val manufacturer: String
 ) : Product(_title, _price), Authors {
 
     override fun toString()=
-        "Game(${super.toString()}, author=$author, manufacter=$manufacter)"
+        "Game(${super.toString()}, author=$author, manufacturer=$manufacturer)"
 
 }
