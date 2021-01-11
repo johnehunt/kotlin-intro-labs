@@ -11,4 +11,6 @@ fun main() {
 
     Bookshop.book.numberHeld = 5
     println("Number of copies held: ${Bookshop.book.numberHeld}")
+
+    println(Bookshop.game)
 }
