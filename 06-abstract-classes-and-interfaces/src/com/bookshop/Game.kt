@@ -7,8 +7,7 @@ class Game(
     val manufacter: String
 ) : Product(_title, _price), Authors {
 
-    override fun toString(): String {
-        return "Game(${super.toString()}, author=$author, manufacter=$manufacter)"
-    }
+    override fun toString()=
+        "Game(${super.toString()}, author=$author, manufacter=$manufacter)"
 
 }
