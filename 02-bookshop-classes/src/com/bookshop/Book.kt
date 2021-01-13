@@ -1,7 +1,7 @@
 package com.bookshop
 
 class Book(val title: String,
-           val price: Double,
+           var price: Double,
            val author: Author,
            val publisher: Publisher) {
 
