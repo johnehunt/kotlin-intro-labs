@@ -10,14 +10,13 @@ class Book(
     var salesDiscount = 0.0
 
     var numberHeld = 0
-        get() {
-            return field
-        }
+        get() = field
         set(value) {
             if (value >= 0) {
                 field = value
             }
         }
+
 
     fun calculateSalePrice(): Double {
         var price = 0.0
