@@ -6,10 +6,11 @@ interface Sales {
     var salesDiscount: Double
 
     fun calculateSalePrice(): Double {
-        var price = 0.0
+        println("Sales.calculateSalePrice()")
+        var discountedPrice = 0.0
         val discountAmount = this.price * salesDiscount
-        price = this.price - discountAmount
-        return price
+        discountedPrice = this.price - discountAmount
+        return discountedPrice
     }
 
 }
