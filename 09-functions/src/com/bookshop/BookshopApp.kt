@@ -18,8 +18,34 @@ fun main() {
     Bookshop.book.numberHeld = 5
     println("Number of copies held: ${Bookshop.book.numberHeld}")
 
-    println()
+    println("----------------")
 
-    val b: Book? = Bookshop.books[Technical]?.get(0)
-    b?.apply{prettyPrint(this)}
+    // Part 1
+    val b: Book = Bookshop.book
+    prettyPrint(b)
+
+    for (book in Bookshop.books[Technical]!!) {
+        prettyPrint(book)
+    }
+
+    // Part 2
+    val anonymousPrinter = fun(book: Book) {
+        println(book.title)
+        println("\tby ${book.author}")
+        println("\t\t at a cost of ${book.price}")
+    }
+    anonymousPrinter(b)
+
+    // Part 3
+    val lambdaPrinter: (Book) -> Unit = {book ->
+        println(book.title)
+        println("\tby ${book.author}")
+        println("\t\t at a cost of ${book.price}")
+    }
+    lambdaPrinter(b)
+
+    // Part 4
+    val printBook = ::prettyPrint
+    printBook(b)
+
 }
