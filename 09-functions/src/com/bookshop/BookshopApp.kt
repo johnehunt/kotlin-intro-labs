@@ -37,14 +37,14 @@ fun main() {
     anonymousPrinter(b)
 
     // Part 3
-    val lambdaPrinter: (Book) -> Unit = {book ->
-        println(book.title)
-        println("\tby ${book.author}")
-        println("\t\t at a cost of ${book.price}")
+    val lambdaPrinter: (Book) -> Unit = {
+        println(it.title)
+        println("\tby ${it.author}")
+        println("\t\t at a cost of ${it.price}")
     }
     lambdaPrinter(b)
 
-    // Part 4
+    // Part 4 - callable reference to the function prettyPrint
     val printBook = ::prettyPrint
     printBook(b)
 
