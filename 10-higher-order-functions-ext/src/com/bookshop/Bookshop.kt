@@ -49,10 +49,12 @@ object Bookshop {
     }
 
     // Extension Point HoF
-    fun applyToGenre(genre: Genre, func: (List<Book>) -> Unit): Bookshop {
+    fun applyToGenre(genre: Genre,
+                     func: (List<Book>) -> Unit) {
         val genreBooks = books[genre]
-        genreBooks?.run {func(this)}
-        return this
+        if (genreBooks != null) {
+            func(genreBooks)
+        }
     }
 
 }
