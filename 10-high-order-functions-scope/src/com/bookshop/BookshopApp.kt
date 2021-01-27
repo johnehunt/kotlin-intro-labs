@@ -32,23 +32,22 @@ fun main() {
 
     println("Printing all books below 15.0 in price")
     technicalBooks
-        ?.filter{book -> book.price < 15.0}
-        ?.forEach{book -> prettyPrint(book) }
+        ?.filter { book -> book.price < 15.0 }
+        ?.forEach { book -> prettyPrint(book) }
 
     println("-------")
 
-
     val b: Book? = Bookshop.books[Technical]?.get(0)
-    b?.run{prettyPrint(this)}
+    b?.run { prettyPrint(this) }
 
     with(b) {
-        prettyPrint(this!!)
+        prettyPrint(this!!)  // book could be null
     }
 
     val music = Music("Ticket to Ride", 15.95).apply {
         println("Please enter the sales discount for the game: ")
         val discount = readLine()?.toDouble()
-        this.salesDiscount = discount?: 0.0
+        salesDiscount = discount ?: 0.0
     }
 
     println(music)
