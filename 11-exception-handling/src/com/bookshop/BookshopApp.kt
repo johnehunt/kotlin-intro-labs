@@ -18,12 +18,29 @@ fun main() {
     Bookshop.book.numberHeld = 5
     println("Number of copies held: ${Bookshop.book.numberHeld}")
 
+    // Traditional approach
     try {
         Bookshop.book.numberHeld = -5
-    } catch (exp: RuntimeException) {
+    } catch (exp: BookshopException) {
         println(exp.message)
         println("Negative number held value will be ignored")
     }
+
+    // Functional Style
+    runCatching {
+        Bookshop.book.numberHeld = 5
+    }.onFailure {
+        when (it) {
+            is BookshopException -> {
+                println(it.message)
+                println("Negative number held value will be ignored")
+            }
+            else -> throw it
+        }
+    }.onSuccess {
+        println("All went well - updated the book number held")
+    }
+
 
     println()
 
