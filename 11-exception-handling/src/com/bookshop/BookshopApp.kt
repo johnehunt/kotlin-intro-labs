@@ -21,6 +21,7 @@ fun main() {
     // Traditional approach
     try {
         Bookshop.book.numberHeld = -5
+        println("All went well - updated the book number held")
     } catch (exp: BookshopException) {
         println(exp.message)
         println("Negative number held value will be ignored")
@@ -28,7 +29,7 @@ fun main() {
 
     // Functional Style
     runCatching {
-        Bookshop.book.numberHeld = 5
+        Bookshop.book.numberHeld = -5
     }.onFailure {
         when (it) {
             is BookshopException -> {

@@ -1,3 +1,4 @@
 package com.bookshop
 
-class BookshopException(message: String = "") : RuntimeException(message)
+class BookshopException(message: String = "") :
+    RuntimeException(message)
