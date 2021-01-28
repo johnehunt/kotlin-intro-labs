@@ -16,7 +16,7 @@ abstract class Product(val title: String,
             if (value >= 0) {
                 field = value
             } else {
-                throw BookshopException("Invalid number held - ${value}")
+                throw BookshopException("Invalid number held: ${value}")
             }
         }
 
