@@ -46,7 +46,8 @@ fun main() {
 
     val music = Music("Ticket to Ride", 15.95).apply {
         println("Please enter the sales discount for the game: ")
-        val discount = readLine()?.toDouble()
+        val discountString: String? = readLine()
+        val discount: Double? = discountString?.toDouble()
         salesDiscount = discount ?: 0.0
     }
 
